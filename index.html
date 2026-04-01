@@ -31,7 +31,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -124,8 +124,20 @@
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
     }
 
     .feature {
@@ -484,6 +496,7 @@
           <li><span class="check">✓</span> No monthly fees</li>
         </ul>
         <a href="#contact" class="cta-btn" style="width: 100%; text-align: center;">Get Started</a>
+        <p class="pricing-note" style="margin-top: 16px; margin-bottom: 0;">No payment upfront required. I'll email you a quote first.</p>
       </div>
     </div>
   </section>
